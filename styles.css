@@ -1,0 +1,282 @@
+/* MCU Atlas — support/privacy site. Plain CSS, system font stack, no dependencies. */
+
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --text-secondary: #48484a;
+  --border: #d2d2d7;
+  --accent: #b3131c;
+  --accent-contrast: #ffffff;
+  --link: #a0121a;
+  --focus: #0a66ff;
+  --banner-bg: #fff4d6;
+  --banner-border: #b98900;
+  --banner-text: #4a3800;
+  --code-bg: #eef0f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e10;
+    --surface: #1c1c1e;
+    --text: #f2f2f4;
+    --text-secondary: #c7c7cc;
+    --border: #3a3a3c;
+    --accent: #ff5b5b;
+    --accent-contrast: #1c1c1e;
+    --link: #ff8a8a;
+    --focus: #6ab0ff;
+    --banner-bg: #3a2e00;
+    --banner-border: #e0b400;
+    --banner-text: #ffe28a;
+    --code-bg: #2a2a2c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--focus);
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+a {
+  color: var(--link);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.draft-banner {
+  background: var(--banner-bg);
+  color: var(--banner-text);
+  border-bottom: 2px solid var(--banner-border);
+  text-align: center;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.header-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-inner img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand-sub {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+nav.primary-nav {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem 0.9rem;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+nav.primary-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav.primary-nav a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+}
+
+nav.primary-nav a:hover {
+  border-bottom-color: var(--accent);
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 2.2rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.4rem;
+}
+
+h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.4rem;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  margin: 1.25rem 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card-grid .card {
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.7rem 1.3rem;
+  border-radius: 9px;
+  border: 2px solid transparent;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.note {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.pending {
+  background: var(--code-bg);
+  border-left: 4px solid var(--banner-border);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+
+dl.field-list dt {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+dl.field-list dd {
+  margin-left: 0;
+  color: var(--text-secondary);
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 1.25rem 2.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+footer.site-footer p {
+  margin: 0.3rem 0;
+}
+
+ul.plain-list {
+  padding-left: 1.2rem;
+}
+
+ul.plain-list li {
+  margin: 0.4rem 0;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .header-inner {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+}

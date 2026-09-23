@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — MCU Atlas</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img src="assets/icon-256.png" alt="" width="40" height="40">
+    <div>
+      <p class="brand-title">MCU Atlas</p>
+      <p class="brand-sub">Made by Will Baldwin Designs</p>
+    </div>
+  </div>
+  <nav class="primary-nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+  </nav>
+</header>
+
+<main id="main">
+  <h1>Privacy</h1>
+  <p class="lede">This page explains what MCU Atlas does with information, in plain terms. It covers the app itself, contacting us, links the app opens, and this website.</p>
+
+  <h2>No ads, no tracking</h2>
+  <p>MCU Atlas contains no advertising SDK, no third-party analytics SDK, and no tracking SDK of any kind. Nothing in the app is designed to identify you across other apps or websites.</p>
+
+  <h2>App data: on your device, and planned private iCloud sync</h2>
+  <p>Your watch history, spoiler preference, and other progress data are stored on your device. Private iCloud synchronization across your own devices is planned for MCU Atlas: when available and turned on, this data syncs through Apple's CloudKit private database, tied to your own Apple Account. There is no server operated by the developer, and Will Baldwin Designs does not have a general window into what you watch.</p>
+  <p>To keep two devices' edits from colliding, each synchronized operation carries a per-device operation identifier. This identifier is generated and stored on the device itself; it is not derived from your Apple Account or any other account, and it is not shared with the developer or any third party outside your own private iCloud data.</p>
+  <p>This is not a claim of end-to-end encryption implemented by the app, an unconditional no-access guarantee, or a promise that no data is ever collected under any definition — it describes the private-database design as built. iCloud sync relies on Apple's own account, transport, and storage systems, which are Apple's to describe in their own terms.</p>
+
+  <h2>If you contact us</h2>
+  <p>The "Report an Issue" button on our <a href="support.html">Support page</a> only opens a draft email in your own mail app, addressed to <a href="mailto:willbaldwindesigns@gmail.com">willbaldwindesigns@gmail.com</a> with a subject line filled in — nothing beyond what you choose to write goes into it.</p>
+  <p>The in-app "Report an Issue" control is different: it prepares a reviewable draft that includes the category and item you're reporting about (if any), the app version, the catalog snapshot date, a drafted timestamp, and the message you write. You can review it, then copy, share, or email it yourself. Nothing is ever sent automatically, and your watch history is not silently attached — only the fields listed above are included, and only when you choose to send the draft.</p>
+  <p>When you do send us an email, we receive whatever you send — your email address and the content of your message. You can email us to ask about your message or ask us to delete it; we handle these requests individually, since there is no account system to manage them automatically.</p>
+
+  <h2>Provider links, Handoff, and Spotlight</h2>
+  <dl class="field-list">
+    <dt>Provider links ("Where to watch")</dt>
+    <dd>These open the streaming provider's own app or website. Once you leave MCU Atlas, that provider's own privacy practices apply — we don't control or see what happens there.</dd>
+    <dt>Handoff</dt>
+    <dd>If you have Handoff turned on, the title, route, or search text you're viewing can be picked up by your own other Apple devices signed into the same Apple Account. MCU Atlas does not keep a record of this and does not send it anywhere else.</dd>
+    <dt>Spotlight</dt>
+    <dd>Spotlight indexing on your device includes public catalog titles and curated route names only — never your watch history, notes, or searches.</dd>
+  </dl>
+
+  <h2>This website</h2>
+  <p>This support and privacy site is hosted on GitHub Pages, GitHub's static-site hosting service. GitHub's own documentation states that when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, regardless of whether the visitor has signed into GitHub or not. That logging is performed by GitHub as the host — it is separate from the MCU Atlas app and is not something we collect or receive. For GitHub's own description of how it handles that data, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>. These pages themselves add no advertising, analytics, tracking scripts, or cookies of our own.</p>
+
+  <h2>Product limits relevant to your data</h2>
+  <ul class="plain-list">
+    <li>Progress tracking is manual; MCU Atlas does not import progress from any streaming provider's history.</li>
+    <li>Catalog updates are designed to preserve identities so your progress carries forward, but this is not an absolute guarantee in every case.</li>
+    <li>MCU Atlas does not use Live Activities.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  <p>Email us at <a href="mailto:willbaldwindesigns@gmail.com">willbaldwindesigns@gmail.com</a> to ask about this policy or about data associated with a message you've sent us.</p>
+</main>
+
+<footer class="site-footer">
+  <p>MCU Atlas is made by Will Baldwin Designs.</p>
+  <p>Contact: <a href="mailto:willbaldwindesigns@gmail.com">willbaldwindesigns@gmail.com</a> &middot; Community: u/MCUAtlasApp</p>
+  <p class="note">Not affiliated with, endorsed by, or sponsored by Marvel or The Walt Disney Company.</p>
+</footer>
+</body>
+</html>
